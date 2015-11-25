@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+bool palindrome(string input){
+int lastindex = input.length() - 1;
+ for(int x=0; x <= lastindex; x++)
+{
+ if (input[x] == input[lastindex-x]){
+       } else {
+       return false;
+}
+}
+ return true;
+  }
+
+
+int main() {
+string input;
+
+cout<<"Enter a series of characters:";
+cin>>input;
+
+ bool answer = palindrome(input);
+ if (answer == true) {
+cout<< "Well, that is a palindrome!"<< endl;
+} else {
+cout<<"Sorry, not a palindrome."<<endl;
+}
+return 0;
+}
